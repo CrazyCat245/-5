@@ -100,6 +100,7 @@ namespace 作業5
             timer.Interval = TimeSpan.FromSeconds(1); // 這個計時器設定每一個刻度為1秒
             timer.Tick += new EventHandler(timer_tick); //每一個時間刻度設定一個小程序timer_tick
             timer.Start(); // 啟動這個計時器
+
         }
         private void timer_tick(object sender, EventArgs e)
         {
@@ -113,6 +114,11 @@ namespace 作業5
 
             TimeSpan ts = new TimeSpan(0, 0, 0, 0, SliderValue); //將滑桿的數值改變成時間間格的資料形式
             MedShow.Position = ts; // 調整影片播放進度到新的時間
+        }
+        private void txtTime_tick(object sender, EventArgs e)
+        {
+            // 更新目前播放時間到輸入文字框
+            txtTime.Text = MedShow.Position.ToString(@"hh\:mm\:ss");
         }
     }
     

@@ -16,7 +16,8 @@
         <MediaElement HorizontalAlignment="Left" Height="18" Margin="-84,140,0,0" VerticalAlignment="Top" Width="61"/>
         <MediaElement x:Name="MedShow" Margin="78,94,149,127" Height="NaN" Width="NaN" OpacityMask="#FFCA9393" MediaOpened="MedShow_MediaOpened"/>
         <Slider x:Name="sliProgress" HorizontalAlignment="Left" Height="41" Margin="73,361,0,0" VerticalAlignment="Top" Width="533" PreviewMouseLeftButtonUp="sliProgress_PreviewMouseLeftButtonUp"/>
-        <Slider x:Name="sliVolume" HorizontalAlignment="Left" Height="43" Margin="626,420,0,0" VerticalAlignment="Top" Width="114" ValueChanged="sliVolume_ValueChanged"/>
+        <Slider x:Name="sliVolume" HorizontalAlignment="Left" Height="43" Margin="626,420,0,0" VerticalAlignment="Top" Width="114" ValueChanged="sliVolume_ValueChanged" Value="0.5" TickFrequency="0.01" Maximum="1" LargeChange="0.05"/>
+        <TextBox x:Name="txtTime" TextWrapping="Wrap" Margin="611,359,32,83"/>
 
     </Grid>
 </Window>
