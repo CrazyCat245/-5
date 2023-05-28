@@ -40,7 +40,7 @@ namespace 作業5
             string filename = fd.FileName;
             if (filename != "")
             {
-                // 將檔案位置與檔名顯示在輸入文字框裡面
+                
                 txtFilePath.Text = filename;
                 // 將檔案位置與檔名轉化成URI，一種用來設定檔案資源定位的位置資料 
                 Uri u = new Uri(filename);

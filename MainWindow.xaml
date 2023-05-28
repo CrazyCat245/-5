@@ -6,14 +6,15 @@
         xmlns:local="clr-namespace:作業5"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="750" Background="#FFE2C7C7">
-    <Grid>
-        <MediaElement x:Name="MedShow" Margin="78,114,128,74" Height="NaN" Width="NaN" OpacityMask="White"/>
+    <Grid Background="#FFCE7A7A">
         <Button x:Name="btnPlay" Content="播放" Height="NaN" Margin="72,420,578,22" Width="NaN"/>
         <Button x:Name="btnPause" Content="暫停" Height="NaN" Margin="205,420,445,22" Width="NaN"/>
         <Button x:Name="btnStop" Content="停止" Height="NaN" Margin="350,420,300,22" Width="NaN"/>
         <Button x:Name="btnExit" Content="離開" Height="NaN" Margin="505,420,145,22" Width="NaN"/>
         <Button x:Name="btnOpenFile" Content="開啟檔案" Height="NaN" Margin="521,29,81,398" Width="NaN" Click="btnOpenFile_Click"/>
         <TextBox x:Name="txtFilePath" TextWrapping="Wrap" Margin="72,29,243,398" Height="NaN"/>
+        <MediaElement HorizontalAlignment="Left" Height="18" Margin="-84,140,0,0" VerticalAlignment="Top" Width="61"/>
+        <MediaElement x:Name="MedShow" Margin="78,94,128,94" Height="NaN" Width="NaN" OpacityMask="#FFCA9393"/>
 
     </Grid>
 </Window>
