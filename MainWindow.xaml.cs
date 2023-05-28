@@ -16,11 +16,13 @@ using System.Windows.Threading;
 
 namespace 作業5
 {
+
     /// <summary>
     /// MainWindow.xaml 的互動邏輯
     /// </summary>
     public partial class MainWindow : Window
     {
+        DispatcherTimer txtTimer = null;
         public MainWindow()
         {
             InitializeComponent();
@@ -106,6 +108,7 @@ namespace 作業5
         {
             // 小程序，更新目前影片播放進度
             sliProgress.Value = MedShow.Position.TotalMilliseconds;
+            txtTime.Text = MedShow.Position.ToString("h'h 'm'm 's's'");
         }
 
         private void sliProgress_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -115,11 +118,8 @@ namespace 作業5
             TimeSpan ts = new TimeSpan(0, 0, 0, 0, SliderValue); //將滑桿的數值改變成時間間格的資料形式
             MedShow.Position = ts; // 調整影片播放進度到新的時間
         }
-        private void txtTime_tick(object sender, EventArgs e)
-        {
-            // 更新目前播放時間到輸入文字框
-            txtTime.Text = MedShow.Position.ToString(@"hh\:mm\:ss");
-        }
+
+
     }
     
 }
